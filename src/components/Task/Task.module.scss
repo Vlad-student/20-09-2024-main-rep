@@ -1,0 +1,59 @@
+$width: 25%;
+$min-width: 500px;
+$colorBG: wheat;
+$border-width: 1px;
+$indent: 10px;
+
+@mixin font(){
+  font: {
+    size: 1.3em;
+    family: serif;
+    weight: 600;
+  }
+}
+
+
+
+.task {
+  width: $width * 2;
+  min-width: $min-width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: $border-width solid black;
+  padding: 0 $indent;
+  margin: $indent - 2;
+  background-color: $colorBG;
+  &:hover {
+    // background-color: darken($color: $colorBG, $amount: 10%);
+    // background-color: lighten($color: $colorBG, $amount: 10%);
+    // background-color: transparentize($color: $colorBG, $amount: 0.8);
+    background-color: invert($color: $colorBG);
+    color: $colorBG;
+    //background-color: mix($color1: red, $color2: yellow, $weight: 30);
+    // background-color: grayscale($color: $colorBG);
+  }
+  p:first-child {
+    margin-right: auto;
+    @include font();
+    font: {
+      size: 1.3em;
+      family: serif;
+      weight: 600;
+    }
+    text: {
+      shadow: 2px 2px 2px white;
+      decoration:{
+        line: overline;
+        style: dotted;
+      }
+    }
+  }
+  button {
+    margin-left: $indent;
+    @include font();
+    &:hover {
+      background-color: $colorBG;
+    }
+  }
+}
