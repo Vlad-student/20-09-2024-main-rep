@@ -1,0 +1,11 @@
+@use '/src/common/styles/color' as *;
+@use '/src/common/styles/inherits' as *;
+
+.timer{
+    background-color: $colorBG;
+    color: $colorTextSecondary;
+    text-align: center;
+    button{
+        @extend %btn
+    }
+}

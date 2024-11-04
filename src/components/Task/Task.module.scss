@@ -19,7 +19,7 @@ $indent: 10px;
   margin: $indent - 2;
   background-color: $colorBG;
 &:hover{
-  @extend .hover;
+  @extend %hover;
 }
   p:first-child {
     margin-right: auto;

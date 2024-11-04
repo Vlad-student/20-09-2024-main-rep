@@ -1,7 +1,13 @@
   @use '/src/common/styles/color' as *;
   
   
-  .hover {
+  %hover {
     background-color: invert($color: $colorBG);
     color: $colorBG; 
+  }
+
+  %btn{
+    text-transform: uppercase;
+    padding: 5px;
+    margin: 3px;
   }

@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import styles from './Timer.module.scss';
 
 const Timer = () => {
     const [time, setTime] = useState (0);
@@ -22,7 +23,7 @@ const Timer = () => {
     const resetTimer = () => {setRun(false);setTime(0);}
 
     return (
-        <article>
+        <article className={styles.timer}>
             <h2>
                 Timer: {time} seconds 
             </h2>
